@@ -1,16 +1,31 @@
 package com.company;
 import java.util.Date;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class Human {
     public String firstName;
     public String lastName;
+
     public Phone mobile;
     public Animal pet;
-    public Car car;
+    private Car car;
     private Double salary;
     public Date nowDate = new Date();
+
+    public Car getCar(Car car){
+        return this.car;
+    }
+
+    void setCar(Car car){
+        if(this.salary > car.value){
+            System.out.println("gratulacje kupiłes za gotówke");
+            this.car = car;
+        } else if (this.salary > (car.value/12)){
+            System.out.println("gratulacje kupiłes na kredyt");
+            this.car = car;
+        } else {
+            System.out.println("zmień prace wez kredyt");
+        }
+    }
 
 
     double getSalary(){
