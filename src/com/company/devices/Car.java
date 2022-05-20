@@ -49,7 +49,8 @@ public class Car extends Device{
     }
 
     @Override
-    public void sell(Human Buyer, Human Seller, Double price) {
+    public void sell(Human buyer, Human seller, Double price) {
 
     }
 }
+

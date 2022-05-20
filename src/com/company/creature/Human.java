@@ -5,10 +5,11 @@ import com.company.devices.Phone;
 
 import java.util.Date;
 
-public class Human implements Salleable {
+public class Human {
     public String firstName;
     public String lastName;
     public Double cash;
+
 
     public Phone mobile;
     public Animal pet;
@@ -16,15 +17,15 @@ public class Human implements Salleable {
     private Double salary;
     public Date nowDate = new Date();
 
-    public Car getCar(Car car){
+    public Car getCar(Car car) {
         return this.car;
     }
 
-    public void setCar(Car car){
-        if(this.salary > car.value){
+    public void setCar(Car car) {
+        if (this.salary > car.value) {
             System.out.println("gratulacje kupiłes za gotówke");
             this.car = car;
-        } else if (this.salary > (car.value/12)){
+        } else if (this.salary > (car.value / 12)) {
             System.out.println("gratulacje kupiłes na kredyt");
             this.car = car;
         } else {
@@ -32,14 +33,14 @@ public class Human implements Salleable {
         }
     }
 
-    double getSalary(){
+    double getSalary() {
         System.out.println("salary: ");
         System.out.println(nowDate);
         return this.salary;
     }
 
-    public void setSalary(double salary){
-        if(salary >= 0) {
+    public void setSalary(double salary) {
+        if (salary >= 0) {
             this.salary = salary;
             System.out.println("informacje zostały wysłane do systemu ksiegowego");
             System.out.println("konieczności odebrania aneksu do umowy od pani Hani z kadr");
@@ -50,9 +51,7 @@ public class Human implements Salleable {
 
     }
 
-    @Override
-    public void sell(Human Buyer, Human Seller, Double price) {
-
-    }
 }
+
+
 

@@ -3,6 +3,7 @@ package com.company;
 import com.company.creature.Animal;
 import com.company.creature.Human;
 import com.company.devices.Car;
+import com.company.devices.Phone;
 
 public class Main {
 
@@ -12,22 +13,23 @@ public class Main {
        marcin.lastName = "Zadrzynski";
        marcin.cash = 1000.0;
 
+        Human zenon = new Human();
+        marcin.firstName = "Zenon";
+        marcin.lastName = "Marian";
+        marcin.cash = 1000.0;
 
-       Car karlos = new Car("coroll", "toyota", 1992);
+        Phone samsung = new Phone("gaalaxy", "samsung",2008);
+        marcin.mobile = samsung;
+
+
+
+        Car karlos = new Car("coroll", "toyota", 1992);
        karlos.value = 11000.0;
 
        Car wiesWagen = new Car( "wv", "golf", 1987);
        wiesWagen.value = 10000.0;
 
-       Animal Ares = new Animal("dog", 2.0) {
-           @Override
-           public void feed(double foodWeight) {
-           }
-           @Override
-           public String toString() {
-               return null;
-           }
-       };
+
 
         Car pasat1 = new Car("pasat", "vw", 2001);
         pasat1.value = 1200.0;
@@ -36,8 +38,7 @@ public class Main {
 
         marcin.setSalary(2000);
 
-        marcin.pet = Ares;
-       marcin.setCar(karlos);
+        marcin.setCar(karlos);
 
 
        marcin.getCar(wiesWagen);
@@ -54,9 +55,9 @@ public class Main {
 
         pasat1.turnOn();
 
-        System.out.println(marcin.cash);
 
-
+        System.out.println(marcin.mobile);
+        samsung.sell(zenon,marcin,200.0);
 
 
         /*

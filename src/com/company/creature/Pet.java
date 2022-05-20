@@ -12,4 +12,9 @@ public class Pet extends Animal {
     public void feed(double foodWeight) {
 
     }
+
+    @Override
+    public void sell(Human buyer, Human seller, Double price) {
+
+    }
 }

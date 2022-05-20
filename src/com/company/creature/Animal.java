@@ -1,11 +1,12 @@
 package com.company.creature;
 
-public abstract class Animal implements Feedable {
+public abstract class Animal implements Feedable, Salleable {
     public final String species;
     public Double weight;
     public Integer age;
     public String name;
     public Boolean isAlive;
+    public Double value;
 
     public Animal(String species, Double defaultWeight){
         this.species = species;
@@ -53,4 +54,5 @@ public abstract class Animal implements Feedable {
         }
     }
     public abstract String toString();
+
 }
