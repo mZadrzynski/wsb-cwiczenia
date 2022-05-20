@@ -1,9 +1,14 @@
-package com.company;
+package com.company.creature;
+import com.company.creature.Animal;
+import com.company.devices.Car;
+import com.company.devices.Phone;
+
 import java.util.Date;
 
-public class Human {
+public class Human implements Salleable {
     public String firstName;
     public String lastName;
+    public Double cash;
 
     public Phone mobile;
     public Animal pet;
@@ -15,7 +20,7 @@ public class Human {
         return this.car;
     }
 
-    void setCar(Car car){
+    public void setCar(Car car){
         if(this.salary > car.value){
             System.out.println("gratulacje kupiłes za gotówke");
             this.car = car;
@@ -27,14 +32,13 @@ public class Human {
         }
     }
 
-
     double getSalary(){
         System.out.println("salary: ");
         System.out.println(nowDate);
         return this.salary;
     }
 
-    void setSalary(double salary){
+    public void setSalary(double salary){
         if(salary >= 0) {
             this.salary = salary;
             System.out.println("informacje zostały wysłane do systemu ksiegowego");
@@ -45,4 +49,10 @@ public class Human {
         }
 
     }
+
+    @Override
+    public void sell(Human Buyer, Human Seller, Double price) {
+
+    }
 }
+

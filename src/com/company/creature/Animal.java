@@ -1,6 +1,6 @@
-package com.company;
+package com.company.creature;
 
-public class Animal {
+public abstract class Animal implements Feedable {
     public final String species;
     public Double weight;
     public Integer age;
@@ -19,6 +19,15 @@ public class Animal {
         }
     }
 
+    public Double getWeight() {
+        return this.weight;
+    }
+
+    public Animal(String species) {
+        this.species = null;
+    }
+
+
     public void feed() {
         if (weight >= 0){
             weight++;
@@ -26,6 +35,16 @@ public class Animal {
             System.out.println("twoj pet nie zyje");
         }
     }
+
+    public void feed(Double foodWeight) {
+        if (isAlive) {
+            weight += foodWeight;
+            System.out.println("thx for food");
+        } else {
+            System.out.println("trochę za późno");
+        }
+    }
+
     public void takeForAWalk() {
         if (weight >= 0){
             weight--;
@@ -33,4 +52,5 @@ public class Animal {
             System.out.println("twoj pet nie zyje");
         }
     }
+    public abstract String toString();
 }
